@@ -1,0 +1,25 @@
+### ============================================================
+### Dynamic Logger Demo - IntelliJ HTTP Client
+### ============================================================
+
+@baseUrl = http://localhost:8080
+
+
+### 1. Get all loggers
+GET {{baseUrl}}/log/all
+
+
+### 2. Get current log level for a logger
+GET {{baseUrl}}/log/level?logger=com.test.TestService
+
+
+### 3. Change log level to DEBUG
+POST {{baseUrl}}/log/level?logger=com.test.TestService&level=DEBUG
+
+
+### 4. Change log level to INFO
+POST {{baseUrl}}/log/level?logger=com.test.TestService&level=INFO
+
+
+### 5. Trigger logs
+GET {{baseUrl}}/log/test
